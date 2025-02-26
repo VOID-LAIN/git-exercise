@@ -1,10 +1,14 @@
 package packages;
 
 import javax.swing.*;
+import java.awt.Font;
 
 public class informationPage {
 
     public void create(JFrame frame) {
+        // Create a custom font
+        Font customFont = new Font("Arial", Font.BOLD, 15);
+
         // Create the main panel
         JPanel panel = new JPanel();
         panel.setBounds(0, 0, 600, 600);
@@ -12,24 +16,28 @@ public class informationPage {
 
         // Name Label and Text Field
         JLabel nameLabel = new JLabel("اسم");
+        nameLabel.setFont(customFont);
         nameLabel.setBounds(10, 10, 100, 20);
         JTextField nameField = new JTextField(15);
         nameField.setBounds(50, 10, 100, 20);
 
         // Age Label and Text Field
         JLabel ageLabel = new JLabel("سن");
+        ageLabel.setFont(customFont);
         ageLabel.setBounds(10, 50, 100, 20);
         JTextField ageField = new JTextField(15);
         ageField.setBounds(50, 50, 100, 20);
 
         // Email Label and Text Field
         JLabel emailLabel = new JLabel("ایمیل");
+        emailLabel.setFont(customFont);
         emailLabel.setBounds(10, 90, 100, 20);
         JTextField emailField = new JTextField(15);
         emailField.setBounds(50, 90, 100, 20);
 
         // Software Familiarity Level
         JLabel levelLabel = new JLabel("سطح آشنایی با نرم افزارهای مشابه");
+        levelLabel.setFont(customFont);
         levelLabel.setBounds(10, 130, 250, 20);
 
         JRadioButton level1 = new JRadioButton("مبتدی");
@@ -50,6 +58,7 @@ public class informationPage {
 
         // Next Page Button
         JButton nextButton = new JButton("صفحه بعد");
+        nextButton.setFont(customFont);
         nextButton.setBounds(10, 200, 100, 20);
         nextButton.addActionListener(e -> {
             // Remove current panel and move to Page2
