@@ -1,3 +1,4 @@
+import java.awt.*;
 import javax.swing.*;
 import packages.informationPage;
 
@@ -15,6 +16,7 @@ public class Main {
         JPanel panel = new JPanel();
         panel.setLayout(null);
         panel.setBounds(0, 0, 600, 600);
+        panel.setBackground(new Color(0xffff9e));
 
         // Create title label
         JLabel title = new JLabel("فرم نظرسنجی");
@@ -24,11 +26,9 @@ public class Main {
         JButton startButton = new JButton("شروع!");
         startButton.setBounds(10, 40, 100, 20);
 
-        // Add components to the panel
         panel.add(title);
         panel.add(startButton);
 
-        // Add panel to the frame
         frame.add(panel);
 
         // Add action listener to the start button
@@ -37,6 +37,10 @@ public class Main {
             frame.remove(panel);
             frame.revalidate();
             frame.repaint();
+            JPanel yellowPanel = new JPanel();
+            yellowPanel.setBounds(0, 0, 600, 600);
+            yellowPanel.setBackground(new Color(0xffff9e));
+            frame.add(yellowPanel);
 
             // Load and display the first page
             informationPage informationPage = new informationPage();
