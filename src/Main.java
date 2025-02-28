@@ -10,24 +10,19 @@ public class Main {
         frame.setSize(600, 600);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLayout(null);
 
         // Create and configure the main panel
-        JPanel panel = new JPanel();
-        panel.setLayout(null);
-        panel.setBounds(0, 0, 600, 600);
+        JPanel panel = new JPanel(new BorderLayout());
         panel.setBackground(new Color(0xffff9e));
 
         // Create title label
-        JLabel title = new JLabel("فرم نظرسنجی");
-        title.setBounds(270, 210, 100, 20);
+        JLabel title = new JLabel("فرم نظرسنجی", SwingConstants.CENTER);
 
         // Create start button
         JButton startButton = new JButton("شروع!");
-        startButton.setBounds(250, 240, 100, 50);
 
-        panel.add(title);
-        panel.add(startButton);
+        panel.add(title, BorderLayout.CENTER);
+        panel.add(startButton, BorderLayout.SOUTH);
 
         frame.add(panel);
 
@@ -37,10 +32,6 @@ public class Main {
             frame.remove(panel);
             frame.revalidate();
             frame.repaint();
-            JPanel yellowPanel = new JPanel();
-            yellowPanel.setBounds(0, 0, 600, 600);
-            yellowPanel.setBackground(new Color(0xffff9e));
-            frame.add(yellowPanel);
 
             // Load and display the first page
             informationPage informationPage = new informationPage();
