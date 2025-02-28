@@ -20,11 +20,11 @@ public class Main {
 
         // Create title label
         JLabel title = new JLabel("فرم نظرسنجی");
-        title.setBounds(10, 10, 100, 20);
+        title.setBounds(270, 210, 100, 20);
 
         // Create start button
         JButton startButton = new JButton("شروع!");
-        startButton.setBounds(10, 40, 100, 20);
+        startButton.setBounds(250, 240, 100, 50);
 
         panel.add(title);
         panel.add(startButton);
@@ -45,6 +45,7 @@ public class Main {
             // Load and display the first page
             informationPage informationPage = new informationPage();
             informationPage.create(frame);
+
 
             // Refresh the frame
             frame.revalidate();
