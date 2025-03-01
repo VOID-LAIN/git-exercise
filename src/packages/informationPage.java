@@ -56,6 +56,9 @@ public class informationPage {
         // Next Page Button
         JButton nextButton = new JButton("صفحه بعد");
         nextButton.setBounds(10, 200, 100, 20);
+        nextButton.setBackground(new Color(100,150,200));
+        nextButton.setForeground(Color.WHITE);
+        nextButton.setFocusPainted(false);
         nextButton.addActionListener(e -> {
             // Remove current panel and move to Page2
             frame.remove(panel);
