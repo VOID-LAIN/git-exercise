@@ -1,6 +1,6 @@
 import java.awt.*;
 import javax.swing.*;
-import packages.informationPage;
+import packages.*;
 
 public class Main {
 
