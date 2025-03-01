@@ -14,37 +14,38 @@ public class informationPage {
 
         // Name Label and Text Field
         JLabel nameLabel = new JLabel("اسم");
-        nameLabel.setBounds(10, 10, 100, 20);
+        nameLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         JTextField nameField = new JTextField(15);
-        nameField.setBounds(50, 10, 100, 20);
+        nameField.setAlignmentX(Component.CENTER_ALIGNMENT);
         nameField.setMaximumSize(new Dimension(Integer.MAX_VALUE, nameField.getPreferredSize().height));
 
         // Age Label and Text Field
         JLabel ageLabel = new JLabel("سن");
-        ageLabel.setBounds(10, 50, 100, 20);
+        ageLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         JTextField ageField = new JTextField(15);
-        ageField.setBounds(50, 50, 100, 20);
+        ageField.setAlignmentX(Component.CENTER_ALIGNMENT);
         ageField.setMaximumSize(new Dimension(Integer.MAX_VALUE, ageField.getPreferredSize().height));
 
         // Email Label and Text Field
         JLabel emailLabel = new JLabel("ایمیل");
-        emailLabel.setBounds(10, 90, 100, 20);
+        emailLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
         JTextField emailField = new JTextField(15);
-        emailField.setBounds(50, 90, 100, 20);
+        emailField.setAlignmentX(Component.CENTER_ALIGNMENT);
         emailField.setMaximumSize(new Dimension(Integer.MAX_VALUE, emailField.getPreferredSize().height));
 
         // Software Familiarity Level
         JLabel levelLabel = new JLabel("سطح آشنایی با نرم افزارهای مشابه");
-        levelLabel.setBounds(10, 130, 250, 20);
+        levelLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+
+        JPanel radioPanel = new JPanel();
+        radioPanel.setLayout(new BoxLayout(radioPanel, BoxLayout.LINE_AXIS));
+        radioPanel.setBackground(new Color(0xffff9e));
+        radioPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JRadioButton level1 = new JRadioButton("مبتدی");
-        level1.setBounds(10, 160, 100, 20);
         JRadioButton level2 = new JRadioButton("متوسط");
-        level2.setBounds(100, 160, 100, 20);
         JRadioButton level3 = new JRadioButton("پیشرفته");
-        level3.setBounds(190, 160, 100, 20);
         JRadioButton level4 = new JRadioButton("بدون آشنایی");
-        level4.setBounds(280, 160, 150, 20);
 
         // Group the radio buttons
         ButtonGroup group = new ButtonGroup();
@@ -53,9 +54,19 @@ public class informationPage {
         group.add(level3);
         group.add(level4);
 
+        radioPanel.add(Box.createHorizontalGlue());
+        radioPanel.add(level1);
+        radioPanel.add(Box.createHorizontalStrut(10));
+        radioPanel.add(level2);
+        radioPanel.add(Box.createHorizontalStrut(10));
+        radioPanel.add(level3);
+        radioPanel.add(Box.createHorizontalStrut(10));
+        radioPanel.add(level4);
+        radioPanel.add(Box.createHorizontalGlue());
+
         // Next Page Button
         JButton nextButton = new JButton("صفحه بعد");
-        nextButton.setBounds(10, 200, 100, 20);
+        nextButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         nextButton.setBackground(new Color(100,150,200));
         nextButton.setForeground(Color.WHITE);
         nextButton.setFocusPainted(false);
@@ -73,27 +84,24 @@ public class informationPage {
         });
 
         // Add components to the panel
-        panel.add(Box.createRigidArea(new Dimension( 10,  10)));
-        panel.add(Box.createVerticalStrut(10));
+        panel.add(Box.createVerticalGlue()); // Push components to the center vertically
+        panel.add(Box.createRigidArea(new Dimension(10, 10))); // Small space at the top
         panel.add(nameLabel);
-        panel.add(Box.createVerticalStrut(5));
+        panel.add(Box.createRigidArea(new Dimension(10, 5))); // Small space between label and field
         panel.add(nameField);
-        panel.add(Box.createVerticalStrut(10));
+        panel.add(Box.createRigidArea(new Dimension(10, 10))); // Space between sections
         panel.add(ageLabel);
-        panel.add(Box.createVerticalStrut(5));
+        panel.add(Box.createRigidArea(new Dimension(10, 5)));
         panel.add(ageField);
-        panel.add(Box.createVerticalStrut(10));
+        panel.add(Box.createRigidArea(new Dimension(10, 10)));
         panel.add(emailLabel);
-        panel.add(Box.createVerticalStrut(5));
+        panel.add(Box.createRigidArea(new Dimension(10, 5)));
         panel.add(emailField);
-        panel.add(Box.createVerticalStrut(10));
+        panel.add(Box.createRigidArea(new Dimension(10, 10)));
         panel.add(levelLabel);
-        panel.add(Box.createVerticalStrut(5));
-        panel.add(level1);
-        panel.add(level2);
-        panel.add(level3);
-        panel.add(level4);
-        panel.add(Box.createVerticalStrut(20));
+        panel.add(Box.createRigidArea(new Dimension(10, 5)));
+        panel.add(radioPanel); // Add the radio button panel
+        panel.add(Box.createRigidArea(new Dimension(10, 20))); // Space before the button
         panel.add(nextButton);
         panel.add(Box.createVerticalGlue());
 
