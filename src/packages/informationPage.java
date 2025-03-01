@@ -17,18 +17,21 @@ public class informationPage {
         nameLabel.setBounds(10, 10, 100, 20);
         JTextField nameField = new JTextField(15);
         nameField.setBounds(50, 10, 100, 20);
+        nameField.setMaximumSize(new Dimension(Integer.MAX_VALUE, nameField.getPreferredSize().height));
 
         // Age Label and Text Field
         JLabel ageLabel = new JLabel("سن");
         ageLabel.setBounds(10, 50, 100, 20);
         JTextField ageField = new JTextField(15);
         ageField.setBounds(50, 50, 100, 20);
+        ageField.setMaximumSize(new Dimension(Integer.MAX_VALUE, ageField.getPreferredSize().height));
 
         // Email Label and Text Field
         JLabel emailLabel = new JLabel("ایمیل");
         emailLabel.setBounds(10, 90, 100, 20);
         JTextField emailField = new JTextField(15);
         emailField.setBounds(50, 90, 100, 20);
+        emailField.setMaximumSize(new Dimension(Integer.MAX_VALUE, emailField.getPreferredSize().height));
 
         // Software Familiarity Level
         JLabel levelLabel = new JLabel("سطح آشنایی با نرم افزارهای مشابه");
@@ -68,18 +71,28 @@ public class informationPage {
 
         // Add components to the panel
         panel.add(Box.createRigidArea(new Dimension( 10,  10)));
+        panel.add(Box.createVerticalStrut(10));
         panel.add(nameLabel);
+        panel.add(Box.createVerticalStrut(5));
         panel.add(nameField);
+        panel.add(Box.createVerticalStrut(10));
         panel.add(ageLabel);
+        panel.add(Box.createVerticalStrut(5));
         panel.add(ageField);
+        panel.add(Box.createVerticalStrut(10));
         panel.add(emailLabel);
+        panel.add(Box.createVerticalStrut(5));
         panel.add(emailField);
+        panel.add(Box.createVerticalStrut(10));
         panel.add(levelLabel);
+        panel.add(Box.createVerticalStrut(5));
         panel.add(level1);
         panel.add(level2);
         panel.add(level3);
         panel.add(level4);
+        panel.add(Box.createVerticalStrut(20));
         panel.add(nextButton);
+        panel.add(Box.createVerticalGlue());
 
         // Add panel to the frame
         frame.add(panel);
