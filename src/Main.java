@@ -20,6 +20,10 @@ public class Main {
 
         // Create start button
         JButton startButton = new JButton("شروع!");
+        startButton.setBackground(new Color(100,150,200));
+        startButton.setForeground(Color.WHITE);
+        startButton.setFocusPainted(false);
+        startButton.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 20));
 
         panel.add(title, BorderLayout.CENTER);
         panel.add(startButton, BorderLayout.SOUTH);
