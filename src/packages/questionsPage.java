@@ -13,7 +13,7 @@ public class questionsPage {
         panel.setBackground(new Color(0xffff9e));
 
         // Question 1
-        JLabel question1 = new JLabel("چقدر رابط کاربری نرم افزار از نظر شما جذاب است؟");
+        JLabel question1 = new JLabel("How attractive do you find the software's user interface?");
         question1.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JPanel radioPanel1 = new JPanel();
@@ -21,11 +21,11 @@ public class questionsPage {
         radioPanel1.setBackground(new Color(0xffff9e)); // same as background color
         radioPanel1.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        JRadioButton radio1_1 = new JRadioButton("۱");
-        JRadioButton radio1_2 = new JRadioButton("۲");
-        JRadioButton radio1_3 = new JRadioButton("۳");
-        JRadioButton radio1_4 = new JRadioButton("۴");
-        JRadioButton radio1_5 = new JRadioButton("۵");
+        JRadioButton radio1_1 = new JRadioButton("1");
+        JRadioButton radio1_2 = new JRadioButton("2");
+        JRadioButton radio1_3 = new JRadioButton("3");
+        JRadioButton radio1_4 = new JRadioButton("4");
+        JRadioButton radio1_5 = new JRadioButton("5");
 
         ButtonGroup group1 = new ButtonGroup();
         group1.add(radio1_1);
@@ -47,7 +47,7 @@ public class questionsPage {
         radioPanel1.add(Box.createHorizontalGlue());
 
         // Question 2
-        JLabel question2 = new JLabel("آیا دسترسی به امکانات مختلف نرم افزار برای شما آسان است؟");
+        JLabel question2 = new JLabel("Is it easy for you to access the various features of the software?");
         question2.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JPanel radioPanel2 = new JPanel();
@@ -55,11 +55,11 @@ public class questionsPage {
         radioPanel2.setBackground(new Color(0xffff9e)); // same as background color
         radioPanel2.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        JRadioButton radio2_1 = new JRadioButton("۱");
-        JRadioButton radio2_2 = new JRadioButton("۲");
-        JRadioButton radio2_3 = new JRadioButton("۳");
-        JRadioButton radio2_4 = new JRadioButton("۴");
-        JRadioButton radio2_5 = new JRadioButton("۵");
+        JRadioButton radio2_1 = new JRadioButton("1");
+        JRadioButton radio2_2 = new JRadioButton("2");
+        JRadioButton radio2_3 = new JRadioButton("3");
+        JRadioButton radio2_4 = new JRadioButton("4");
+        JRadioButton radio2_5 = new JRadioButton("5");
 
         ButtonGroup group2 = new ButtonGroup();
         group2.add(radio2_1);
@@ -81,7 +81,7 @@ public class questionsPage {
         radioPanel2.add(Box.createHorizontalGlue());
 
         // Question 3
-        JLabel question3 = new JLabel("چقدر طراحی صفحات نرم افزار ساده و کاربرپسند است؟");
+        JLabel question3 = new JLabel("How simple and user-friendly is the software page design?");
         question3.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JPanel radioPanel3 = new JPanel();
@@ -89,11 +89,11 @@ public class questionsPage {
         radioPanel3.setBackground(new Color(0xffff9e)); // same as background color
         radioPanel3.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        JRadioButton radio3_1 = new JRadioButton("۱");
-        JRadioButton radio3_2 = new JRadioButton("۲");
-        JRadioButton radio3_3 = new JRadioButton("۳");
-        JRadioButton radio3_4 = new JRadioButton("۴");
-        JRadioButton radio3_5 = new JRadioButton("۵");
+        JRadioButton radio3_1 = new JRadioButton("1");
+        JRadioButton radio3_2 = new JRadioButton("2");
+        JRadioButton radio3_3 = new JRadioButton("3");
+        JRadioButton radio3_4 = new JRadioButton("4");
+        JRadioButton radio3_5 = new JRadioButton("5");
 
         ButtonGroup group3 = new ButtonGroup();
         group3.add(radio3_1);
@@ -115,7 +115,7 @@ public class questionsPage {
         radioPanel3.add(Box.createHorizontalGlue());
 
         // Question 4
-        JLabel question4 = new JLabel("آیا رنگ ها و فونت های استفاده شده در نرم افزار مناسب هستند؟");
+        JLabel question4 = new JLabel("Are the colors and fonts used in the software appropriate?");
         question4.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JPanel radioPanel4 = new JPanel();
@@ -123,11 +123,11 @@ public class questionsPage {
         radioPanel4.setBackground(new Color(0xffff9e)); // same as background color
         radioPanel4.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        JRadioButton radio4_1 = new JRadioButton("۱");
-        JRadioButton radio4_2 = new JRadioButton("۲");
-        JRadioButton radio4_3 = new JRadioButton("۳");
-        JRadioButton radio4_4 = new JRadioButton("۴");
-        JRadioButton radio4_5 = new JRadioButton("۵");
+        JRadioButton radio4_1 = new JRadioButton("1");
+        JRadioButton radio4_2 = new JRadioButton("2");
+        JRadioButton radio4_3 = new JRadioButton("3");
+        JRadioButton radio4_4 = new JRadioButton("4");
+        JRadioButton radio4_5 = new JRadioButton("5");
 
         ButtonGroup group4 = new ButtonGroup();
         group4.add(radio4_1);
@@ -149,11 +149,12 @@ public class questionsPage {
         radioPanel4.add(Box.createHorizontalGlue());
 
         // Next button to go to Page3
-        JButton nextButton = new JButton("صفحه بعد");
+        JButton nextButton = new JButton("Next Page");
         nextButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         nextButton.setBackground(new Color(100,150,200));
         nextButton.setForeground(Color.WHITE);
         nextButton.setFocusPainted(false);
+
         nextButton.addActionListener(e -> {
             frame.remove(panel);
             frame.revalidate();

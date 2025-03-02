@@ -13,28 +13,31 @@ public class informationPage {
         panel.setBackground(new Color(0xffff9e));
 
         // Name Label and Text Field
-        JLabel nameLabel = new JLabel("اسم");
+        JLabel nameLabel = new JLabel("name");
         nameLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+
         JTextField nameField = new JTextField(15);
         nameField.setAlignmentX(Component.CENTER_ALIGNMENT);
         nameField.setMaximumSize(new Dimension(Integer.MAX_VALUE, nameField.getPreferredSize().height));
 
         // Age Label and Text Field
-        JLabel ageLabel = new JLabel("سن");
+        JLabel ageLabel = new JLabel("age");
         ageLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+
         JTextField ageField = new JTextField(15);
         ageField.setAlignmentX(Component.CENTER_ALIGNMENT);
         ageField.setMaximumSize(new Dimension(Integer.MAX_VALUE, ageField.getPreferredSize().height));
 
         // Email Label and Text Field
-        JLabel emailLabel = new JLabel("ایمیل");
+        JLabel emailLabel = new JLabel("email");
         emailLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
+
         JTextField emailField = new JTextField(15);
         emailField.setAlignmentX(Component.CENTER_ALIGNMENT);
         emailField.setMaximumSize(new Dimension(Integer.MAX_VALUE, emailField.getPreferredSize().height));
 
         // Software Familiarity Level
-        JLabel levelLabel = new JLabel("سطح آشنایی با نرم افزارهای مشابه");
+        JLabel levelLabel = new JLabel("level of familiarity with similar software");
         levelLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JPanel radioPanel = new JPanel();
@@ -42,10 +45,10 @@ public class informationPage {
         radioPanel.setBackground(new Color(0xffff9e));
         radioPanel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
-        JRadioButton level1 = new JRadioButton("مبتدی");
-        JRadioButton level2 = new JRadioButton("متوسط");
-        JRadioButton level3 = new JRadioButton("پیشرفته");
-        JRadioButton level4 = new JRadioButton("بدون آشنایی");
+        JRadioButton level1 = new JRadioButton("beginner");
+        JRadioButton level2 = new JRadioButton("intermediate");
+        JRadioButton level3 = new JRadioButton("advanced");
+        JRadioButton level4 = new JRadioButton("no experience");
 
         // Group the radio buttons
         ButtonGroup group = new ButtonGroup();
@@ -65,11 +68,12 @@ public class informationPage {
         radioPanel.add(Box.createHorizontalGlue());
 
         // Next Page Button
-        JButton nextButton = new JButton("صفحه بعد");
+        JButton nextButton = new JButton("Next Page");
         nextButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         nextButton.setBackground(new Color(100,150,200));
         nextButton.setForeground(Color.WHITE);
         nextButton.setFocusPainted(false);
+
         nextButton.addActionListener(e -> {
             // Remove current panel and move to Page2
             frame.remove(panel);

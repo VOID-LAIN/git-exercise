@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
         // Create and configure the main frame
-        JFrame frame = new JFrame("فرم نظرسنجی");
+        JFrame frame = new JFrame("Survey Form");
         frame.setSize(600, 600);
         frame.setLocationRelativeTo(null);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -16,10 +16,11 @@ public class Main {
         panel.setBackground(new Color(0xffff9e));
 
         // Create title label
-        JLabel title = new JLabel("فرم نظرسنجی", SwingConstants.CENTER);
+        JLabel title = new JLabel("Survey Form", SwingConstants.CENTER);
+        title.setBounds(10, 10, 100, 20);
 
         // Create start button
-        JButton startButton = new JButton("شروع!");
+        JButton startButton = new JButton("Start!");
         startButton.setBackground(new Color(100,150,200));
         startButton.setForeground(Color.WHITE);
         startButton.setFocusPainted(false);
