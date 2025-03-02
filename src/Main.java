@@ -1,10 +1,14 @@
 import java.awt.*;
 import javax.swing.*;
 import packages.*;
+import java.awt.Font;
 
 public class Main {
 
     public static void main(String[] args) {
+        // Create a custom font
+        Font customFont = new Font("Serif", Font.BOLD, 18);
+
         // Create and configure the main frame
         JFrame frame = new JFrame("Survey Form");
         frame.setSize(600, 600);
@@ -17,10 +21,12 @@ public class Main {
 
         // Create title label
         JLabel title = new JLabel("Survey Form", SwingConstants.CENTER);
+        title.setFont(customFont);
         title.setBounds(10, 10, 100, 20);
 
         // Create start button
         JButton startButton = new JButton("Start!");
+        startButton.setFont(customFont);
         startButton.setBackground(new Color(100,150,200));
         startButton.setForeground(Color.WHITE);
         startButton.setFocusPainted(false);

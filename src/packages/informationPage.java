@@ -6,6 +6,9 @@ import java.awt.*;
 public class informationPage {
 
     public void create(JFrame frame) {
+        // Create a custom font
+        Font customFont = new Font("Arial", Font.BOLD, 15);
+
         // Create the main panel
         JPanel panel = new JPanel();
         panel.setBounds(0, 0, 600, 600);
@@ -14,6 +17,7 @@ public class informationPage {
 
         // Name Label and Text Field
         JLabel nameLabel = new JLabel("name");
+        nameLabel.setFont(customFont);
         nameLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JTextField nameField = new JTextField(15);
@@ -22,6 +26,7 @@ public class informationPage {
 
         // Age Label and Text Field
         JLabel ageLabel = new JLabel("age");
+        ageLabel.setFont(customFont);
         ageLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JTextField ageField = new JTextField(15);
@@ -30,6 +35,7 @@ public class informationPage {
 
         // Email Label and Text Field
         JLabel emailLabel = new JLabel("email");
+        emailLabel.setFont(customFont);
         emailLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JTextField emailField = new JTextField(15);
@@ -38,6 +44,7 @@ public class informationPage {
 
         // Software Familiarity Level
         JLabel levelLabel = new JLabel("level of familiarity with similar software");
+        levelLabel.setFont(customFont);
         levelLabel.setAlignmentX(Component.CENTER_ALIGNMENT);
 
         JPanel radioPanel = new JPanel();
@@ -69,6 +76,7 @@ public class informationPage {
 
         // Next Page Button
         JButton nextButton = new JButton("Next Page");
+        nextButton.setFont(customFont);
         nextButton.setAlignmentX(Component.CENTER_ALIGNMENT);
         nextButton.setBackground(new Color(100,150,200));
         nextButton.setForeground(Color.WHITE);
